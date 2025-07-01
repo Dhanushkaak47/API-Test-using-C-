@@ -1,78 +1,114 @@
-API Testing with C# and the Xunit Framework
-This project contains automated API tests for the restful-api.dev REST API using Playwright.
+# API Testing with C# and xUnit Framework
 
-Project Structure
+This project contains automated API tests for the [restful-api.dev](https://restful-api.dev/) REST API using C#, xUnit, and is designed to be executed in Visual Studio Code with `.NET 9 SDK`.
+
+---
+
+## 📁 Project Structure
+
+```
 XUnit Test/
-├── Models/                # API Responses and req models
-│   └── DeleteResponse.cs
-│   └── Item.cs
-│   └── ItemPost.cs
-│   └── ItemResponse.cs
-│   └── ItemUpdate.cs
-├── Test/              # Test data and providers
-│   └── Tests.cs
- 
+├── Models/                # API response and request models  
+│   └── DeleteResponse.cs  
+│   └── Item.cs  
+│   └── ItemPost.cs  
+│   └── ItemResponse.cs  
+│   └── ItemUpdate.cs  
+├── Test/                  # Test data and providers  
+│   └── Tests.cs  
+```
 
-Test Coverage
+---
+
+## ✅ Test Coverage
+
 The test suite covers the following scenarios:
 
-Getting a list of all objects
+### 🔹 Getting a list of all objects
+- Validates response structure  
+- Ensures non-empty list  
+- Verifies object properties  
 
-Validates response structure
-Ensures non-empty list
-Verifies object properties
+### 🔹 Creating a new object
+- Validates successful creation  
+- Verifies object structure  
+- Confirms data matches input  
 
-Creating a new object
+### 🔹 Retrieving a single object
+- Gets object by ID  
+- Validates object properties  
+- Verifies data consistency  
 
-Validates successful creation
-Verifies object structure
-Confirms data matches input
+### 🔹 Updating existing objects
+- Updates object properties  
+- Validates response  
+- Confirms changes applied  
 
-Retrieving a single object
+### 🔹 Deleting objects
+- Removes object  
+- Verifies deletion  
+- Checks 404 after deletion  
+- Error handling  
 
-Gets object by ID
-Validates object properties
-Verifies data consistency
+### 🔹 Negative Testing
+- Get non-existent object  
+- Delete non-existent object  
 
-Updating existing objects
+---
 
-Updates object properties
-Validates response
-Confirms changes applied
+## 🚀 Setup Instructions
 
-Deleting objects
+### 🔗 Clone the Repository
 
-Removes object
-Verifies deletion
-Checks 404 after deletion
-Error handling
+```bash
+git clone https://github.com/Dhanushkaak47/API-Test-using-C-.git
+cd API-Test-using-C-
+```
 
-Get Non-existent object
-Delete Non-existent object
+### 🛠 Prerequisites
 
-Setup
-Clone Git repository
-https://github.com/Lahiruhiran/playWrightAssessment/tree/playwrightAeesement
+Ensure the following are installed:
 
-1.	Install .NET 9 SDK
-Make sure you have the .NET 9 SDK installed. You can check with:
-dotnet --version
+1. .NET 9 SDK  
+   Verify installation:
+   ```bash
+   dotnet --version
+   ```
 
-2.	Install VS Code Extensions
-•	C# Dev Kit (or C# for Visual Studio Code (powered by OmniSharp))
-•	.NET Install Tool for Extension Authors (if prompted)
-•	Test Explorer UI (optional, for a GUI test runner)
+2. VS Code Extensions  
+   - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) *(or C# for Visual Studio Code powered by OmniSharp)*  
+   - [.NET Install Tool for Extension Authors](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-install-tool)  
+   - [Test Explorer UI (Optional)](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer) *(for GUI test runner)*  
 
-3.	Open the Project Folder
-Open the root folder of your project in VS Code (the folder containing your .csproj file).
-4.	Restore NuGet Packages
-In the terminal, run:
+---
+
+## ⚙️ Running the Project
+
+### 🔄 Restore NuGet Packages
+
+```bash
 dotnet restore
+```
 
-5.	Build the Project
+### 🏗 Build the Project
+
+```bash
 dotnet build
+```
 
-6.	Run the Tests
+### 🧪 Run Tests
+
+```bash
 dotnet test
+```
 
-This will execute all your xUnit tests and show the results in the terminal.
+All xUnit tests will be executed and results will be displayed in the terminal.
+
+---
+
+## 🧑‍💻 Author
+
+**Dhanushka Madhusanka**  
+[GitHub](https://github.com/Dhanushkaak47)
+
+---
