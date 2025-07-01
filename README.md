@@ -1,15 +1,17 @@
-# XUnit Test
-API Testing with Playwright
+API Testing with C# and the Xunit Framework
 This project contains automated API tests for the restful-api.dev REST API using Playwright.
 
 Project Structure
 XUnit Test/
 ├── Models/                # API Responses and req models
-│   └── objects.api.ts
+│   └── DeleteResponse.cs
+│   └── Item.cs
+│   └── ItemPost.cs
+│   └── ItemResponse.cs
+│   └── ItemUpdate.cs
 ├── Test/              # Test data and providers
-│   └── providers/
-│       └── object.provider.ts
-
+│   └── Tests.cs
+ 
 
 Test Coverage
 The test suite covers the following scenarios:
@@ -47,6 +49,30 @@ Error handling
 
 Get Non-existent object
 Delete Non-existent object
-Prerequisites
-Node.js (v14 or higher)
-npm (comes with Node.js)
+
+Setup
+Clone Git repository
+https://github.com/Lahiruhiran/playWrightAssessment/tree/playwrightAeesement
+
+1.	Install .NET 9 SDK
+Make sure you have the .NET 9 SDK installed. You can check with:
+dotnet --version
+
+2.	Install VS Code Extensions
+•	C# Dev Kit (or C# for Visual Studio Code (powered by OmniSharp))
+•	.NET Install Tool for Extension Authors (if prompted)
+•	Test Explorer UI (optional, for a GUI test runner)
+
+3.	Open the Project Folder
+Open the root folder of your project in VS Code (the folder containing your .csproj file).
+4.	Restore NuGet Packages
+In the terminal, run:
+dotnet restore
+
+5.	Build the Project
+dotnet build
+
+6.	Run the Tests
+dotnet test
+
+This will execute all your xUnit tests and show the results in the terminal.
