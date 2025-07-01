@@ -102,10 +102,6 @@ dotnet build
 dotnet test
 ```
 
-All xUnit tests will be executed and results will be displayed in the terminal.
-
----
-
 ## 🧑‍💻 Author
 
 **Dhanushka Madhusanka**  
